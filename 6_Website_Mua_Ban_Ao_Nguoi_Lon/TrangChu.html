@@ -1,0 +1,438 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Trang Chủ</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
+	<script src="bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="reponsive.css" />
+	<style>
+		a {
+			text-decoration: none;
+			color: #000000;
+		}
+	</style>
+	</head>
+
+<body>
+	<header class="container-fluid">
+		<nav>
+			<!-- bắt đầu nav-mobile -->
+			<div class="nav-mobile">
+				<div class="icon-mobile" id="btnmenu">
+					<i class="fa fa-bars" aria-hidden="true"></i>&ensp;
+					<a href="DangNhap.html" class="fa fa-user-o"></a>
+				</div>
+				<div class="item_menu" id="menutop">
+					<form>
+						<input type="text" name="search" placeholder="Tìm kiếm sản phẩm..." />
+						<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+					</form>
+					<ul>
+						<li><a href="#">Trang Chủ</a></li>
+						<li><a href="#">Sản Phẩm</a></li>
+						<li><a href="#">Liên Hệ</a></li>
+						<li><a href="#">Giới Thiệu</a></li>
+					</ul>
+
+				</div>
+			</div>
+			<!-- kết thúc nav-mobile -->
+			<div class="img-nav">
+				<a href="TrangChu.html"><img src="HinhAnh/Logo.png" alt="" style="width: 100px;" /></a>
+			</div>
+			<div class="content-nav menu">
+				<div style="padding-top: 10px;">
+					<ul>
+						<li><a href="Sale.html">SALE</a></li>
+						<li><a href="Nu.html">NỮ</a>
+							<ul class="sub-menu" style="width: 250px">
+								<div style="width: 250px">
+									<li><a href="#">Hàng mới về</a></li>
+									<li><a href="#">Áo</a></li>
+									<li><a href="#">Quần</a></li>
+									<li><a href="#">Váy</a></li>
+									<li><a href="#">Đầm</a></li>
+								</div>
+							</ul>
+						</li>
+						<li><a href="Nam.html">NAM</a>
+							<ul class="sub-menu" style="width: 250px">
+								<div style="width: 250px">
+									<li><a href="#">Hàng mới về</a></li>
+									<li><a href="#">Áo</a></li>
+									<li><a href="#">Quần</a></li>
+								</div>
+							</ul>
+						</li>
+						<li><a href="BoSuuTap.html">COLLECTION</a></li>
+					</ul>
+				</div>
+				<form>
+					<input style="text-decoration: underline;" type="text" name="search"
+						placeholder="Tìm kiếm sản phẩm..." />
+					<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+				</form>
+				<div style="padding-top: 10px; margin-left: 20px;"><i class="fa fa-user-o" aria-hidden="true"></i></div>
+				
+			</div>
+			<!-- The Modal -->
+			<div style="padding-top: 25px;">
+				<button id="cart" style="height: 45px;">
+					<i class="fa fa-shopping-basket" aria-hidden="true"></i>
+					Giỏ Hàng
+				</button>
+			</div>
+			<div id="myModal" class="modal">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Giỏ Hàng</h5>
+						<span class="close">&times;</span>
+					</div>
+					<div class="modal-body">
+						<div class="cart-row">
+							<span class="cart-item cart-header cart-column">Sản Phẩm</span>
+							<span class="cart-price cart-header cart-column">Giá</span>
+							<span class="cart-quantity cart-header cart-column">Số Lượng</span>
+						</div>
+						<div class="cart-items">
+						</div>
+						<div class="cart-total">
+							<strong class="cart-total-title">Tổng Cộng:</strong>
+							<span class="cart-total-price">0VNĐ</span>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary close-footer">Đóng</button>
+						<button type="button" class="btn btn-primary order">Thanh Toán</button>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<section class="container-fluid" id="Slider" style="justify-content: center">
+		<center>
+			<div class="aspect-ratio-169 container-fluid">
+				<div class="container">
+					<img src="HinhAnh/section1.webp " width="100%">
+					<img src="HinhAnh/section2.webp" width="100%">
+					<img src="HinhAnh/section3.webp" width="100%">
+				</div>
+			</div>
+			<div class="dot-container2">
+				<div class="dot active"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+			</div>
+			<br>
+			<a id="SALE" style="font-size: 30px" class="align: center">FLASH SALE</a>
+			<div class="container-fluid">
+				<div class="container">
+					<a href="BoSuuTap.html"><img src="HinhAnh/SALE1.webp" width="100%"></a>
+				</div>
+			</div>
+			<div class="display-container2 container-fluid">
+				<div class="mySlides3">
+					<table>
+						<tr>
+							<td><a href="CT1_Nu1.html"><img src="HinhAnh/Nu1.jpg" width="285"><br>
+									Đầm Lụa Cổ Xẻ Thắt Nơ</a><br><strong>799.000đ</strong>
+								<font style="text-decoration: line-through; color: gray; font-size: 10px">1.790.000đ
+								</font>
+								    <a href="GioHang.html" class="fa fa-shopping-bag"></a>
+							</td>
+							<td><a href="CT1_Nu8.html"><img src="HinhAnh/Nu8_1.jfif" width="285"><br>
+									Đầm Chữ A 2 Lớp</a><br><strong>649.000đ</strong>
+								<font style="text-decoration: line-through; color: gray; font-size: 10px">1.490.000đ
+								</font>
+								    <a href="GioHang.html" class="fa fa-shopping-bag"></a>
+							</td>
+							<td><a href="CT1_Nam9.html"><img src="HinhAnh/Nam9_1.jfif" width="285"><br>Men Tweed
+									Bomber
+									Jacket</a><br><strong>799.000đ</strong>
+								<font style="text-decoration: line-through; color: gray; font-size: 10px">2.690.000đ
+								</font>
+								&ensp;&ensp;&ensp;&ensp;<a href="GioHang.html" class="fa fa-shopping-bag"></a>
+							</td>
+							<td><a href="CT1_Nam10.html"><img src="HinhAnh/Nam10_1.jfif" width="285"><br>Áo Sơ Mi
+									Nam
+									Dáng
+									Regular</a><br><b>599.000đ</b>
+								<font style="text-decoration: line-through; color: gray; font-size: 10px">
+									1.290.000đ
+								</font>
+								&ensp;&ensp;&ensp;&ensp;<a href="GioHang.html" class="fa fa-shopping-bag"></a>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="mySlides3">
+					<table>
+						<tr>
+							<td><a href="CT1_Nu3.html"><img src="HinhAnh/Nu3_1.jpg" width="285"><br>
+									Đầm Lụa Cổ Xẻ Thắt Nơ</a><br><strong>799.000đ</strong>
+								<font style="text-decoration: line-through; color: gray; font-size: 10px">1.790.000đ
+								</font>
+								    <a href="GioHang.html" class="fa fa-shopping-bag"></a>
+							</td>
+							<td><a href="CT1_Nu2.html"><img src="HinhAnh/Nu2_1.jpg" width="285"><br>
+									Đầm Chữ A 2 Lớp</a><br><strong>649.000đ</strong>
+								<font style="text-decoration: line-through; color: gray; font-size: 10px">1.490.000đ
+								</font>
+								    <a href="GioHang.html" class="fa fa-shopping-bag"></a>
+							</td>
+							<td><a href="CT1_Nam7.html"><img src="HinhAnh/Nam7.jfif" width="285"><br>Men Tweed
+									Bomber
+									Jacket</a><br><strong>799.000đ</strong>
+								<font style="text-decoration: line-through; color: gray; font-size: 10px">2.690.000đ
+								</font>
+								&ensp;&ensp;&ensp;&ensp;<a href="GioHang.html" class="fa fa-shopping-bag"></a>
+							</td>
+							<td><a href="CT1_Nam9.html"><img src="HinhAnh/Nam9_1.jfif" width="285"><br>Áo Sơ Mi Nam
+									Dáng
+									Regular</a><br><b>599.000đ</b>
+								<font style="text-decoration: line-through; color: gray; font-size: 10px">
+									1.290.000đ
+								</font>
+								&ensp;&ensp;&ensp;&ensp;<a href="GioHang.html" class="fa fa-shopping-bag"></a>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="mySlides3">
+					<table>
+						<tr>
+							<td><a href="CT1_Nu12.html"><img src="HinhAnh/Nu12_1.jpg" width="285"><br>
+									Đầm Lụa Cổ Xẻ Thắt Nơ</a><br><strong>799.000đ</strong>
+								<font style="text-decoration: line-through; color: gray; font-size: 10px">1.790.000đ
+								</font>
+								    <a href="GioHang.html" class="fa fa-shopping-bag"></a>
+							</td>
+							<td><a href="CT1_Nu6.html"><img src="HinhAnh/Nu6_1.jpg" width="285"><br>
+									Đầm Chữ A 2 Lớp</a><br><strong>649.000đ</strong>
+								<font style="text-decoration: line-through; color: gray; font-size: 10px">1.490.000đ
+								</font>
+								    <a href="GioHang.html" class="fa fa-shopping-bag"></a>
+							</td>
+							<td><a href="CT1_Nam2.html"><img src="HinhAnh/Nam2_1.jfif" width="285"><br>Men Tweed
+									Bomber
+									Jacket</a><br><strong>799.000đ</strong>
+								<font style="text-decoration: line-through; color: gray; font-size: 10px">2.690.000đ
+								</font>
+								&ensp;&ensp;&ensp;&ensp;<a href="GioHang.html" class="fa fa-shopping-bag"></a>
+							</td>
+							<td><a href="CT1_Nam12.html"><img src="HinhAnh/Nam12_1.jfif" width="285"><br>Áo Sơ Mi
+									Nam
+									Dáng
+									Regular</a><br><b>599.000đ</b>
+								<font style="text-decoration: line-through; color: gray; font-size: 10px">
+									1.290.000đ
+								</font>
+								&ensp;&ensp;&ensp;&ensp;<a href="GioHang.html" class="fa fa-shopping-bag"></a>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<button class="image-button button-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="image-button button-right" onclick="plusDivs(1)">&#10095;</button>
+
+				<div class="badge" style="width:100%">
+
+					<span class="image-badge" onclick="currentDiv(1)"></span>
+					<span class="image-badge" onclick="currentDiv(2)"></span>
+					<span class="image-badge" onclick="currentDiv(3)"></span>
+				</div>
+			</div>
+			<br><a href="Sale.html">
+				<div class="container2">
+					<button class="button">
+						<div class="button__line"></div>
+						<div class="button__line"></div>
+						<span class="button__text">Xem Thêm</span>
+						<div class="button__drow1"></div>
+						<div class="button__drow2"></div>
+					</button>
+				</div><br>
+			</a>
+			<br>
+			<a id="COLLECT" style="font-size: 30px" class="align: center">COLLECTION</a>
+			<div class="container-fluid">
+				<div class="container"><br>
+					<div class="row">
+						<a href="BoSuuTap.html"><img src="HinhAnh/BST1.jpg"
+								style="border: 1px; border-radius: 100px 0 100px 0;" width="100%"></a>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-md-6">
+							<a href="BoSuuTap.html"><img src="HinhAnh/BST1_1.jpg"
+									style="border: 1px; border-radius: 100px 0 100px 0;" width="100%"></a>
+						</div>
+
+						<div class="col-md-6"><br>
+							<a href="BoSuuTap.html"><img src="HinhAnh/BST1_2.jpg"
+									style="border: 1px; border-radius: 100px 0 100px 0;" width="100%"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br><a href="BoSuuTap.html">
+				<div class="container2">
+					<button class="button">
+						<div class="button__line"></div>
+						<div class="button__line"></div>
+						<span class="button__text">Xem Thêm</span>
+						<div class="button__drow1"></div>
+						<div class="button__drow2"></div>
+					</button>
+				</div><br>
+			</a>
+			<br>
+			<a id="NEW" style="font-size: 30px" class="align: center">NEW</a>
+			<div class="container-fluid">
+				<div class="container"><br>
+					<div class="row">
+						<div class="col-md-6">
+							<a href="#"><img src="HinhAnh/newf1.webp" class="w-100"></a>
+						</div>
+						<div class="col-md-6">
+							<div class="row">
+								<div class="col-md-6">
+									<a href="#"><img src="HinhAnh/newf2.webp" class="w-100"><br></a>
+								</div>
+								<div class="col-md-6">
+									<a href="#"><img src="HinhAnh/newf3.webp" class="w-100"><br></a>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<a href="#"><img src="HinhAnh/newf4.jpg" class="w-100"><br></a>
+								</div>
+								<div class="col-md-6">
+									<a href="#"><img src="HinhAnh/newf5.webp" class="w-100"><br></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br><a href="New.html">
+				<div>
+					<button class="button">
+						<div class="button__line"></div>
+						<div class="button__line"></div>
+						<span class="button__text">Xem Thêm</span>
+						<div class="button__drow1"></div>
+						<div class="button__drow2"></div>
+					</button>
+				</div>
+				<br>
+			</a>
+			<br>
+			<hr style="width: 100px">
+			</hr>
+			<br>
+			<strong style="font-size: 35px; color: #2D5AAA">#LOGOCOMMUNITY</strong><br><br>
+			<font size="4px">Hãy để những trải nghiệm thời trang của bạn trở nên thật tuyệt vời cùng các sản phẩm
+				LOGO.
+				Đừng quên sử dụng hashtag #logo để cùng chia sẻ khoảnh khắc với LOGO nha.<br></font>
+			<br>
+			<table style="width: 80%">
+				<tr>
+					<td>
+						<center><img src="HinhAnh/icon1.svg" style="width: 80px">
+							<div style="color: #7AA6FF; font-weight: bold"><br>ĐƯỢC KIỂM TRA HÀNG</div>
+						</center>
+					</td>
+					<td>
+						<center><img src="HinhAnh/icon2.svg" style="width: 80px">
+							<div style="color: #7AA6FF; font-weight: bold"><br>MIỄN PHÍ ĐỔI TRẢ</div>
+						</center>
+					</td>
+					<td>
+						<center><img src="HinhAnh/icon3.svg" style="width: 80px">
+							<div style="color: #7AA6FF; font-weight: bold"><br>NHẬN HÀNG TẠI STORE</div>
+						</center>
+					</td>
+					<td>
+						<center><img src="HinhAnh/icon4.svg" style="width: 106px">
+							<div style="color: #7AA6FF; font-weight: bold"><br>MIỄN PHÍ GIAO HÀNG</div>
+						</center>
+					</td>
+				</tr>
+			</table>
+			<br>
+		</center>
+	</section>
+	<br><br>
+	<footer class="container-fluid">
+		<div class="container text-center"></div>
+		<br>
+		<div class="row">
+			<div class="col-md-4">
+				<b class="borderbottom">THÔNG TIN CÔNG TY</b>
+				<br><a href="#">Giới thiệu (Tên Shop)</a></li>
+				<br><a href="#">(Địa chỉ shop)</a></li>
+				<br><a href="#">(Email)</a></li><br>
+				<br><a href="#">
+						<div style="background-color: #000000; color: white; padding: 10px; width: 300px;"><b>Hot line: 093 177
+								4698</b></div>
+					</a></li>
+				<br>
+			</div>
+			<div class="col-md-4">
+				<b class="borderbottom">HỖ TRỢ KHÁCH HÀNG</b>
+				<br><a href="Vip.html">Chính Sách Thành Viên</a></li>
+				<br><a href="DoiHang.html">Chính Sách Đổi Trả</a></li>
+				<br><a href="#">Hướng Dẫn Đặt Hàng</a></li>
+				<br><a href="BangSize.html">Hướng Dẫn Kích Thước</a></li>
+				<br><br>
+				<b class="borderbottom">ĐĂNG KÍ NHẬN TIN KHUYẾN MÃI</b><br><br>
+				<input type="email" placeholder="Nhập email của bạn" class="text"><br><br>
+				<div style="width: 300px;"><font>Hãy nhập email của bạn vào đây để nhận tin khuyến mãi mới nhất!</font></div>
+				<br>
+			</div>
+			<div class="col-md-4">
+				<table style="width: 300px; font-weight: bold" cellspacing="0">
+					<tr>
+						<td><b class="borderbottom">LIÊN HỆ CHÚNG TÔI</b><br><br>
+							<img src="HinhAnh/FB.png" align="middle"> <img src="HinhAnh/IG.png" align="middle"> <img
+								src="HinhAnh/PT.png" align="middle"> <img src="HinhAnh/SKY.png" align="middle"> <img
+								src="HinhAnh/TT.png" align="middle">
+
+						</td>
+					</tr>
+					<tr>
+						<td><br><b class="borderbottom">PHƯƠNG THỨC THANH TOÁN</b><br><br>
+							<img src="HinhAnh/Pay.png" width="70" align="middle"> <img src="HinhAnh/PayPal.png"
+								width="60" align="middle"> <img src="HinhAnh/VISA.png" width="60" align="middle">
+						</td>
+					</tr>
+					<tr>
+						<td><br><b class="borderbottom">APP</b><br><br>
+							<img src="HinhAnh/googleplay.png" width="135" align="middle"> <img
+								src="HinhAnh/appstore.png" width="135" align="middle">
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<br>
+	</footer>
+	</div>
+</body>
+<script src="script.js"></script>
+
+</html>

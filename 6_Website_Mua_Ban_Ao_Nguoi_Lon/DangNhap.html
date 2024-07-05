@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Untitled Document</title>
+	<link rel="stylesheet" type="text/css" href="style1.css">
+	<link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+</head>
+
+<body>
+	<div class="container2" id="container2">
+
+		<div class="form-container2 register-container2">
+			<form action="#" method="GET" name="f-sign-in">
+				<h1>ĐĂNG KÝ.</h1><br>
+				<label for="name"><b>Full Name</b></label>
+                <input name="name" id="name" minlength="11" type="name" placeholder="Nhập Full Name">
+                <span class="err-name"></span>
+
+				<label for="email"><b>Email</b></label>
+                <input name="email" id="email" minlength="11" type="email" placeholder="Nhập Email">
+                <span class="err-email"></span>
+
+                <label for="passwd"><b>Password</b></label>
+                <input name="passwd" id="passwd" minlength="11" type="password" placeholder="Nhập Password">
+                <span class="err-pass"></span>
+
+				<label for="repasswd"><b>Password</b></label>
+                <input name="repasswd" id="repasswd" minlength="11" type="password" placeholder="Xác nhận Password">
+                <span class="err-repass"></span>
+
+				<button onclick="KiemTra()" type="submit" class="btn-sign-in">Đăng Ký</button>
+				<span>Hoặc</span>
+				<div class="social-container2">
+					<a href="#" class="social"><i class="lni lni-facebook-fill"></i></a>
+					<a href="#" class="social"><i class="lni lni-google"></i></a>
+					<a href="#" class="social"><i class="lni lni-linkedin-original"></i></a>
+				</div>
+			</form>
+		</div>
+
+		<div class="form-container2 login-container2">
+			<form action="#" method="GET" name="f-sign-in">
+				<h1>ĐĂNG NHẬP</h1><br>
+				<label for="email"><b>Email</b></label>
+                <input name="email" id="email" minlength="11" type="email" placeholder="Nhập Email">
+                <span class="err-email"></span>
+                <label for="passwd"><b>Password</b></label>
+                <input name="passwd" id="passwd" minlength="11" type="password" placeholder="Nhập Password">
+                <span class="err-pass"></span>
+				<div class="content">
+					<div class="checkbox">
+						<input type="checkbox" name="checkbox" id="checkbox">
+						<label>Ghi nhớ</label>
+					</div>
+					<div class="pass-link">
+						<a href="#">Quên mật khẩu?</a>
+					</div>
+				</div>
+				<button onclick="KiemTra()" type="submit" class="btn-sign-in">Đăng Nhập.</button>
+				<span>Hoặc</span>
+				<div class="social-container2">
+					<a href="#" class="social"><i class="lni lni-facebook-fill"></i></a>
+					<a href="#" class="social"><i class="lni lni-google"></i></a>
+					<a href="#" class="social"><i class="lni lni-linkedin-original"></i></a>
+				</div>
+			</form>
+		</div>
+
+		<div class="overlay-container2">
+			<div class="overlay">
+				<div class="overlay-panel overlay-left">
+					<h1 class="title">Bạn đã có tài khoản</h1>
+					<p>Nếu bạn đã có tài khoản, hãy đăng nhập để tích lũy điểm thành viên và nhận được những ưu đãi tốt hơn!</p>
+					<button class="ghost" id="login">Đăng Nhập
+						<i class="lni lni-arrow-left login"></i>
+					</button>
+				</div>
+				<div class="overlay-panel overlay-right">
+					<h1 class="title">Khách Hàng Mới</h1>
+					<p>Nếu bạn chưa có tài khoản trên ivymoda.com, hãy sử dụng tùy chọn này để truy cập biểu mẫu đăng ký.
+						Bằng cách cung cấp cho chúng tôi thông tin chi tiết của bạn, quá trình mua hàng sẽ là một trải nghiệm thú vị và nhanh chóng hơn!</p>
+					<button class="ghost" id="register">Đăng Ký
+						<i class="lni lni-arrow-right register"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</body>
+	<script>
+		const registerButton = document.getElementById("register");
+		const loginButton = document.getElementById("login");
+		const container2 = document.getElementById("container2");
+
+		registerButton.addEventListener("click", () => {
+			container2.classList.add("right-panel-active");
+		});
+
+		loginButton.addEventListener("click", () => {
+			container2.classList.remove("right-panel-active");
+		});
+	</script>
+	<script>
+        function KiemTra(){
+            let valid = true;
+			let fullname=document.getElementById("name");
+            let repass=document.getElementById("repasswd");
+            let errName= document.querySelector(".err-name");
+            let errRePass= document.querySelector(".err-repass");
+
+            let mail=document.getElementById("email");
+            let pass=document.getElementById("passwd");
+            let errMail= document.querySelector(".err-email");
+            let errPass= document.querySelector(".err-pass");
+            let acc= document.querySelector(".account");
+            
+			if(fullname.value == "")
+            {
+                valid = false;
+                errName.textContent = "Vui lòng kiểm tra Tên"
+            }
+
+			const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            
+			if(mail.value == ""||mail.value.length < 10||emailRegex.test(mail) == false)
+            {
+                valid = false;
+                errMail.textContent = "Vui lòng kiểm tra Email!"
+            }
+			
+			const minLength = 8;
+			const maxLength = 32;
+			const letterNumberRegexSpecialChar = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*])[a-zA-Z\d!@#$%^&*]{8,}$/;
+			
+			if(pass.value == ""){
+				valid = false;
+				errPass.textContent = "Please fill the field."
+			}
+            if(pass.value.length < minLength || pass.value.length > maxLength)
+            {
+               	valid = false;
+                errPass.textContent = "Kiem tra lai Pass phai tu 10 ky tu!"
+            }
+			if (!letterNumberRegexSpecialChar.test(pass)) {
+				valid = false;
+				errPass.textContent = "Password should contain alphabetic, numeric and special characters.";
+			}
+			if (repass.value != pass.value) {
+				valid = false;
+				errRePass.textContent = "Password should contain alphabetic, numeric and special characters.";
+			}
+            if(valid == true){
+                acc.textContent = mail.value;
+                document.getElementById("announcement").style.display="block";
+                document.getElementById("container-form").style.display="none";
+            }
+        }
+    </script>
+
+<script src="signup.js"></script>
+</html>

@@ -1,0 +1,50 @@
+const APP_VERSION = '1668585175.7301438';
+const avatarComponent = document.createElement('div');
+
+avatarComponent.classList.add('avatar-component');
+avatarComponent.setAttribute("id", "iris-button");
+
+avatarComponent.innerHTML = '<img src="https://st.mngbcn.com/static/assets/chatbot/images/M-MANGO.png" alt="mng" />'
+
+avatarComponent.addEventListener('click', () => {
+  document.getElementById("iris-button").remove();
+  let js = document.createElement('script');
+  js.setAttribute('src', `https://storage.googleapis.com/mango-chatbot-widget-environments/static/load-iris.js?t=${APP_VERSION}`);
+  document.body.append(js);
+});
+
+const styleButton = document.createElement('link');
+styleButton.setAttribute('href', `https://storage.googleapis.com/mango-chatbot-widget-environments/static/iris-button.css?t=${APP_VERSION}`);
+styleButton.setAttribute('rel', 'stylesheet');
+
+document.head.append(styleButton);
+document.body.appendChild(avatarComponent);
+
+const animateCTA = async () => {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const language = urlParams.get('languageCode') ? urlParams.get('languageCode') : (window.verne?.mdm?.languageISO) ? window.verne.mdm.languageISO : 'es';
+  const source = urlParams.get('source') || 'chat';
+  const initialAnimation = JSON.parse(sessionStorage.getItem('initialAnimation'));
+
+  const isChatOpen = JSON.parse(localStorage.getItem('isChatOpen'));
+
+  if (source === 'chat' && !initialAnimation) {
+    if (!isChatOpen) {
+      const avatar = document.querySelector('.avatar-component');
+      if (avatar) {
+        avatar.classList.add('animation');
+        const divText = document.createElement('div');
+        divText.classList.add('animation_text');
+        const jsonBody = await fetch(
+          `https://st.mngbcn.com/static/assets/chatbot/i18n/i18n.${language}.json${APP_VERSION && `?t=${APP_VERSION}`}`
+        ).then((res) => res.json());
+        divText.innerText = jsonBody['avatar-component']['HELP_MESSAGE'];
+        avatar.appendChild(divText);
+      }
+    }
+    sessionStorage.setItem('initialAnimation', true);
+  }
+};
+
+setTimeout(animateCTA, 2000);

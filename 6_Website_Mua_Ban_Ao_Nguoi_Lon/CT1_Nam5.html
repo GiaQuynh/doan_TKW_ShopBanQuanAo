@@ -1,0 +1,372 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Chi Tiết H3 Nam (Trang 1)</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
+<script src="bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+	integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="reponsive.css" />
+<style>
+	a {
+		text-decoration: none;
+		color: #000000;
+	}
+</style>
+</head>
+
+<body>
+	<header class="container-fluid">
+		<nav>
+			<!-- bắt đầu nav-mobile -->
+			<div class="nav-mobile">
+				<div class="icon-mobile" id="btnmenu">
+					<i class="fa fa-bars" aria-hidden="true"></i>&ensp;
+					<a href="DangNhap.html" class="fa fa-user-o"></a>
+				</div>
+				<div class="item_menu" id="menutop">
+					<form>
+						<input type="text" name="search" placeholder="Tìm kiếm sản phẩm..." />
+						<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+					</form>
+					<ul>
+						<li><a href="#">Trang Chủ</a></li>
+						<li><a href="#">Sản Phẩm</a></li>
+						<li><a href="#">Liên Hệ</a></li>
+						<li><a href="#">Giới Thiệu</a></li>
+					</ul>
+
+				</div>
+			</div>
+			<!-- kết thúc nav-mobile -->
+			<div class="img-nav">
+				<a href="TrangChu.html"><img src="HinhAnh/Logo.png" alt="" style="width: 100px;" /></a>
+			</div>
+			<div class="content-nav menu">
+				<div style="padding-top: 10px;">
+					<ul>
+						<li><a href="Sale.html">SALE</a></li>
+						<li><a href="Nu.html">NỮ</a>
+							<ul class="sub-menu" style="width: 250px">
+								<div style="width: 250px">
+									<li><a href="#">Hàng mới về</a></li>
+									<li><a href="#">Áo</a></li>
+									<li><a href="#">Quần</a></li>
+									<li><a href="#">Váy</a></li>
+									<li><a href="#">Đầm</a></li>
+								</div>
+							</ul>
+						</li>
+						<li><a href="Nam.html">NAM</a>
+							<ul class="sub-menu" style="width: 250px">
+								<div style="width: 250px">
+									<li><a href="#">Hàng mới về</a></li>
+									<li><a href="#">Áo</a></li>
+									<li><a href="#">Quần</a></li>
+								</div>
+							</ul>
+						</li>
+						<li><a href="BoSuuTap.html">COLLECTION</a></li>
+					</ul>
+				</div>
+				<form>
+					<input style="text-decoration: underline;" type="text" name="search"
+						placeholder="Tìm kiếm sản phẩm..." />
+					<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+				</form>
+				<div style="padding-top: 10px; margin-left: 20px;"><a href="DangNhap.html"><i class="fa fa-user-o" aria-hidden="true"></i></a></div>
+				
+			</div>
+			<!-- The Modal -->
+			<div style="padding-top: 25px;">
+				<button id="cart" style="height: 45px;">
+					<i class="fa fa-shopping-basket" aria-hidden="true"></i>
+					Giỏ Hàng
+				</button>
+			</div>
+			<div id="myModal" class="modal">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Giỏ Hàng</h5>
+						<span class="close">&times;</span>
+					</div>
+					<div class="modal-body">
+						<div class="cart-row">
+							<span class="cart-item cart-header cart-column">Sản Phẩm</span>
+							<span class="cart-price cart-header cart-column">Giá</span>
+							<span class="cart-quantity cart-header cart-column">Số Lượng</span>
+						</div>
+						<div class="cart-items">
+						</div>
+						<div class="cart-total">
+							<strong class="cart-total-title">Tổng Cộng:</strong>
+							<span class="cart-total-price">0VNĐ</span>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary close-footer">Đóng</button>
+						<button type="button" class="btn btn-primary order">Thanh Toán</button>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<section>
+	<div class="TD">
+		<div>
+			<table style="width: 600px" cellspacing="0">
+			<tr>
+				<th rowspan="5"><img class="img-big" src="HinhAnh/Nam5_1.jfif" width="400"></th>
+			</tr>
+			<tr>
+				<th><img class="img-small" src="HinhAnh/Nam5_1.jfif" width="100"></th>
+			</tr>
+			<tr>
+				<th><img class="img-small" src="HinhAnh/Nam5_1_1.jfif" width="100"></th>
+			</tr>
+			<tr>
+				<th><img class="img-small" src="HinhAnh/Nam5_1_2.jfif" width="100"></th>
+			</tr>
+			<tr>
+				<th><img class="img-small" src="HinhAnh/Nam5_1_3.jfif" width="100"></th>
+			</tr>
+			</table>
+			</div>
+			
+		<div style="margin-left: 30px">
+			<strong style="font-size: 30px">ÁO THUN PHỐI TÚI HỘP</strong><br><br>
+			SKU: 57E3346 
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span> (0 đánh giá)<br><br>
+			<strong style="font-size: 30px">309.000đ</strong>   <font color="#858585" style="text-decoration: line-through">1.790.000đ</font><br><br>
+			<strong style="font-size: 30px">Màu sắc: Trắng</strong><br><br>
+			<img src="HinhAnh/White.png"><br><br>
+			<input type="button" value="S" style="width: 50px; height: 50px">
+			<input type="button" value="M" style="width: 50px; height: 50px">
+			<input type="button" value="L" style="width: 50px; height: 50px">
+			<input type="button" value="XL" style="width: 50px; height: 50px">
+			<input type="button" value="XXL" style="width: 50px; height: 50px">
+			<br><br>
+			<a href="BangSizeNu.html" style="text-decoration: underline">Size của bạn ?</a><br><br>
+			<b style="font-size: 30px">Số lượng</b>&ensp;<input type="number" style="width: 50px; height: 50px; text-align: center"><br><br>
+			<a href="GioHang_Nam1.html"><input type="button" value="THÊM VÀO GIỎ HÀNG" style="width: 169px; height: 50px; background-color: black; color: white"></a>
+			<a href="ThanhToan.html"><input type="button" value="MUA HÀNG" style="width: 150px; height: 50px"><br><br></a>
+			
+	  		<div class="product-border">
+	  			<div class="product-top">
+	  			</div>
+	  			<div class="product-tilte-content">
+	  				<div class="product-tilte">
+	  					<div class="product-tilte-items intro">
+	  						<strong>GIỚI THIỆU</strong>
+	  					</div>
+	  					<div class="product-tilte-items abc">
+	  						<strong>CHI TIẾT SẢN PHẨM</strong>
+	  					</div>
+	  					<div class="product-tilte-items baoquan">
+	  						<strong>BẢO QUẢN</strong>
+	  					</div>
+	  				</div>
+	  				<br>
+	  				<div class="product-content">
+	  					<div class="product-items-intro">
+
+            <br>
+			<br>Áo thun trơn cổ tròn basic sẽ là item không thể thiếu trong những ngày hè sắp tới cho mọi chàng trai.<br><br>Dáng áo trẻ trung dễ mặc cùng túi áo trước ngực lạ mắt mang cảm giác hiện đại. Chất áo thun thoáng mát cho các chàng trai vận động thoải mái không lo trong thời tiết mùa hè sắp tới.<br><br>Màu sắc: Nude - Xanh Dương<br>
+			<br>
+			  <strong>THÔNG TIN MẪU:</strong><br>
+			  <br>
+			  <strong>Chiều cao:</strong> 177 cm<br>
+			  <br>
+			  <strong>Cân nặng:</strong> 68 kg<br>
+			  <br>
+			  <strong>Số đo 3 vòng:</strong> 94-86-98 cm<br>
+			  <br>
+			  Mẫu mặc size L<br>
+			  <br>
+		    Lưu ý: Màu sắc sản phẩm thực tế sẽ có sự chênh lệch nhỏ so với ảnh do điều kiện ánh sáng khi chụp và màu sắc hiển thị qua màn hình máy tính/ điện thoại.
+	  					</div>
+	  					<br>
+	  					<div class="product-items-abc">
+	  						<table style="width: 300px">
+					<tr>
+						<td><b>Dòng sản phẩm</b></td>
+						<td>Men</td>
+					</tr>
+					<tr>
+						<td><b>Nhóm sản phẩm</b></td>
+						<td>Áo</td>
+					</tr>
+					<tr>
+						<td><b>Cổ áo</b></td>
+						<td>Khác</td>
+					</tr>
+					<tr>
+						<td><b>Độ dài</b></td>
+						<td>Dài thường</td>
+					</tr>
+					<tr>
+						<td><b>Họa tiết</b></td>
+						<td>Trơn</td>
+					</tr>
+					<tr>
+						<td><b>Độ dài</b></td>
+						<td>Qua gối</td>
+					</tr>
+					<tr>
+						<td><b>Họa tiết</b></td>
+						<td>Trơn</td>
+					</tr>
+					<tr>
+						<td><b>Chất liệu</b></td>
+						<td>Sơ mi</td>
+					</tr>
+				</table>	
+	  					</div>
+	  					<div class="product-items-baoquan">
+	  							  						<br>
+			  Chi tiết bảo quản sản phẩm : <br>
+			  <br>
+            <strong>* Các sản phẩm thuộc dòng cao cấp (Senora) và áo khoác (dạ, tweed, lông, phao) chỉ giặt khô, tuyệt đối không giặt ướt.</strong>
+	  					</div>
+	  				</div>
+	  			
+	  		
+	  		</div>
+	  		<br>
+	  		
+		</div>
+		</div>
+	<br><br>
+	</div>
+	<div>
+		<br><br><br>
+		<center>
+		  <strong style="font-size: 30px">Sản phẩm tương tự</strong><br>
+		  <br>
+		  <table cellpadding="20" cellspacing="0" style="width: 1100px">
+			<tr>
+				<td><br><a href="CT1_Nu4.html"><img src="HinhAnh/Nam4_1.jfif" width="200"><br>Áo Thun Symphony</a><br><b>299.000đ</b> <font style="text-decoration: line-through; color: gray; font-size: 10px">650.000đ</font>&ensp;&ensp;&ensp;&ensp;<a href="GioHang.html" class="fa fa-shopping-bag"></a></td>
+				<td><br><a href="CT1_Nu5.html"><img src="HinhAnh/Nam5_1.jfif" width="200"><br>Áo Sơ Mi Phối Line Cổ</a><br><b>549.000đ</b> <font style="text-decoration: line-through; color: gray; font-size: 10px"> 1.150.000đ</font>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="GioHang.html" class="fa fa-shopping-bag"></a></td>
+				<td><br><img src="HinhAnh/Nam6_2.jfif" width="200"><br><a href="#">Áo Thun In Quote</a><br><b>299.000đ </b> <font style="text-decoration: line-through; color: gray; font-size: 10px">650.000đ</font>&ensp;&ensp;&ensp;&ensp;<a href="GioHang.html" class="fa fa-shopping-bag"></a></td>
+				<td><br><img src="HinhAnh/Nam7.jfif" width="200"><br><a href="#">Áo Sơ Mi Denim</a><br><b>399.000đ </b> <font style="text-decoration: line-through; color: gray; font-size: 10px">890.000đ</font>&ensp;&ensp;&ensp;&ensp;<a href="GioHang.html" class="fa fa-shopping-bag"></a></td>
+				<td><br><img src="HinhAnh/Nam8_1.jfif" width="200"><br><a href="#">Áo Sơ Mi BB Shirt</a><br><b>499.000đ </b> <font style="text-decoration: line-through; color: gray; font-size: 10px">1.090.000đ</font>&ensp;&ensp;&ensp;&ensp;<a href="GioHang.html" class="fa fa-shopping-bag"></a></td>
+			</tr>
+			</table>
+		</center>
+	</div>
+	</section>
+	<br><br>
+	<footer class="container-fluid">
+		<div class="container"></div>
+		<div class=""></div>
+		<div class=""></div>
+		<div class=""></div>
+		<br>
+		<div class="row">
+			<div class="col-md-4">
+				<b class="borderbottom">THÔNG TIN CÔNG TY</b>
+				<br><a href="#">Giới thiệu (Tên Shop)</a></li>
+				<br><a href="#">(Địa chỉ shop)</a></li>
+				<br><a href="#">(Email)</a></li><br>
+				<br><a href="#">
+					<div style="background-color: #000000; color: white; padding: 10px; width: 300px;"><b>Hot line: 093
+							177
+							4698</b></div>
+				</a></li>
+				<br>
+			</div>
+			<div class="col-md-4">
+				<b class="borderbottom">HỖ TRỢ KHÁCH HÀNG</b>
+				<br><a href="Vip.html">Chính Sách Thành Viên</a></li>
+				<br><a href="DoiHang.html">Chính Sách Đổi Trả</a></li>
+				<br><a href="#">Hướng Dẫn Đặt Hàng</a></li>
+				<br><a href="BangSize.html">Hướng Dẫn Kích Thước</a></li>
+				<br><br>
+				<b class="borderbottom">ĐĂNG KÍ NHẬN TIN KHUYẾN MÃI</b><br><br>
+				<input type="email" placeholder="Nhập email của bạn" class="text"><br><br>
+				<div style="width: 300px;">
+					<font>Hãy nhập email của bạn vào đây để nhận tin khuyến mãi mới nhất!</font>
+				</div>
+				<br>
+			</div>
+			<div class="col-md-4">
+				<table style="width: 300px; font-weight: bold" cellspacing="0">
+					<tr>
+						<td><b class="borderbottom">LIÊN HỆ CHÚNG TÔI</b><br><br>
+							<img src="HinhAnh/FB.png" align="middle"> <img src="HinhAnh/IG.png" align="middle"> <img
+								src="HinhAnh/PT.png" align="middle"> <img src="HinhAnh/SKY.png" align="middle"> <img
+								src="HinhAnh/TT.png" align="middle">
+
+						</td>
+					</tr>
+					<tr>
+						<td><br><b class="borderbottom">PHƯƠNG THỨC THANH TOÁN</b><br><br>
+							<img src="HinhAnh/Pay.png" width="70" align="middle"> <img src="HinhAnh/PayPal.png"
+								width="60" align="middle"> <img src="HinhAnh/VISA.png" width="60" align="middle">
+						</td>
+					</tr>
+					<tr>
+						<td><br><b class="borderbottom">APP</b><br><br>
+							<img src="HinhAnh/googleplay.png" width="135" align="middle"> <img
+								src="HinhAnh/appstore.png" width="135" align="middle">
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<br>
+	</footer>
+
+</body>
+<script>
+	// JavaScript Document
+	const intro = document.querySelector(".intro")
+	const abc = document.querySelector(".abc")
+	const baoquan = document.querySelector(".baoquan")
+	document.querySelector(".product-items-baoquan").style.display = "none"
+	document.querySelector(".product-items-abc").style.display = "none"
+	document.querySelector(".product-items-intro").style.display = "none"
+	if(intro){
+		intro.addEventListener("click", function(){
+			document.querySelector(".product-items-baoquan").style.display = "none"
+			document.querySelector(".product-items-abc").style.display = "none"
+			document.querySelector(".product-items-intro").style.display = "block"
+		})
+	}
+	if(abc){
+		abc.addEventListener("click", function(){
+			document.querySelector(".product-items-baoquan").style.display = "none"
+			document.querySelector(".product-items-abc").style.display = "block"
+			document.querySelector(".product-items-intro").style.display = "none"
+		})
+	}
+	if(baoquan){
+		baoquan.addEventListener("click", function(){
+			document.querySelector(".product-items-baoquan").style.display = "block"
+			document.querySelector(".product-items-abc").style.display = "none"
+			document.querySelector(".product-items-intro").style.display = "none"
+		})
+	}
+	//
+	const bigIMG = document.querySelector(".img-big")
+	const smallIMG = document.querySelectorAll(".img-small")
+	smallIMG.forEach(function(imgItem,x){
+	imgItem.addEventListener("click",function(){
+		bigIMG.src = imgItem.src;
+		})
+	})
+</script>
+</html>
